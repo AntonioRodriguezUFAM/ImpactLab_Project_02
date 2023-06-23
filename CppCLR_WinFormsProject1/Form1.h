@@ -50,7 +50,8 @@ namespace CppCLRWinFormsProject {
 	private: System::Windows::Forms::Button^ mirror;
 	private: System::Windows::Forms::Timer^ timer1;
 	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::Label^ lTimer;
+
 	private: System::Windows::Forms::Button^ btClose;
 	private: System::Windows::Forms::Button^ btExit;
 	private: System::ComponentModel::IContainer^ components;
@@ -83,7 +84,7 @@ namespace CppCLRWinFormsProject {
 			this->mirror = (gcnew System::Windows::Forms::Button());
 			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->lTimer = (gcnew System::Windows::Forms::Label());
 			this->btClose = (gcnew System::Windows::Forms::Button());
 			this->btExit = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
@@ -92,10 +93,10 @@ namespace CppCLRWinFormsProject {
 			// 
 			// open
 			// 
-			this->open->Location = System::Drawing::Point(592, 10);
-			this->open->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->open->Location = System::Drawing::Point(530, 12);
+			this->open->Margin = System::Windows::Forms::Padding(4, 2, 4, 2);
 			this->open->Name = L"open";
-			this->open->Size = System::Drawing::Size(124, 58);
+			this->open->Size = System::Drawing::Size(170, 33);
 			this->open->TabIndex = 0;
 			this->open->Text = L"Open";
 			this->open->UseVisualStyleBackColor = true;
@@ -104,20 +105,20 @@ namespace CppCLRWinFormsProject {
 			// pictureBox1
 			// 
 			this->pictureBox1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->pictureBox1->Location = System::Drawing::Point(15, 10);
-			this->pictureBox1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->pictureBox1->Location = System::Drawing::Point(19, 12);
+			this->pictureBox1->Margin = System::Windows::Forms::Padding(4, 2, 4, 2);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(529, 604);
+			this->pictureBox1->Size = System::Drawing::Size(503, 531);
 			this->pictureBox1->TabIndex = 1;
 			this->pictureBox1->TabStop = false;
 			this->pictureBox1->Click += gcnew System::EventHandler(this, &Form1::pictureBox1_Click);
 			// 
 			// negativeFilter
 			// 
-			this->negativeFilter->Location = System::Drawing::Point(592, 159);
-			this->negativeFilter->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->negativeFilter->Location = System::Drawing::Point(530, 343);
+			this->negativeFilter->Margin = System::Windows::Forms::Padding(4, 2, 4, 2);
 			this->negativeFilter->Name = L"negativeFilter";
-			this->negativeFilter->Size = System::Drawing::Size(124, 58);
+			this->negativeFilter->Size = System::Drawing::Size(170, 33);
 			this->negativeFilter->TabIndex = 2;
 			this->negativeFilter->Text = L"Negative Filter";
 			this->negativeFilter->UseVisualStyleBackColor = true;
@@ -126,19 +127,19 @@ namespace CppCLRWinFormsProject {
 			// pictureBox2
 			// 
 			this->pictureBox2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->pictureBox2->Location = System::Drawing::Point(761, 10);
-			this->pictureBox2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->pictureBox2->Location = System::Drawing::Point(708, 12);
+			this->pictureBox2->Margin = System::Windows::Forms::Padding(4, 2, 4, 2);
 			this->pictureBox2->Name = L"pictureBox2";
-			this->pictureBox2->Size = System::Drawing::Size(529, 604);
+			this->pictureBox2->Size = System::Drawing::Size(503, 535);
 			this->pictureBox2->TabIndex = 3;
 			this->pictureBox2->TabStop = false;
 			// 
 			// Saturação
 			// 
-			this->Saturação->Location = System::Drawing::Point(592, 309);
-			this->Saturação->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->Saturação->Location = System::Drawing::Point(530, 417);
+			this->Saturação->Margin = System::Windows::Forms::Padding(4, 2, 4, 2);
 			this->Saturação->Name = L"Saturação";
-			this->Saturação->Size = System::Drawing::Size(124, 58);
+			this->Saturação->Size = System::Drawing::Size(170, 33);
 			this->Saturação->TabIndex = 4;
 			this->Saturação->Text = L"Saturation";
 			this->Saturação->UseVisualStyleBackColor = true;
@@ -146,20 +147,20 @@ namespace CppCLRWinFormsProject {
 			// 
 			// saturationInput
 			// 
-			this->saturationInput->Location = System::Drawing::Point(603, 372);
-			this->saturationInput->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->saturationInput->Location = System::Drawing::Point(530, 455);
+			this->saturationInput->Margin = System::Windows::Forms::Padding(4, 2, 4, 2);
 			this->saturationInput->Name = L"saturationInput";
-			this->saturationInput->Size = System::Drawing::Size(102, 22);
+			this->saturationInput->Size = System::Drawing::Size(170, 27);
 			this->saturationInput->TabIndex = 5;
 			this->saturationInput->Text = L"10";
 			this->saturationInput->TextChanged += gcnew System::EventHandler(this, &Form1::saturationInput_TextChanged);
 			// 
 			// flip
 			// 
-			this->flip->Location = System::Drawing::Point(592, 82);
-			this->flip->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->flip->Location = System::Drawing::Point(530, 306);
+			this->flip->Margin = System::Windows::Forms::Padding(4, 2, 4, 2);
 			this->flip->Name = L"flip";
-			this->flip->Size = System::Drawing::Size(124, 58);
+			this->flip->Size = System::Drawing::Size(170, 33);
 			this->flip->TabIndex = 6;
 			this->flip->Text = L"Flip";
 			this->flip->UseVisualStyleBackColor = true;
@@ -167,10 +168,10 @@ namespace CppCLRWinFormsProject {
 			// 
 			// mirror
 			// 
-			this->mirror->Location = System::Drawing::Point(592, 235);
-			this->mirror->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->mirror->Location = System::Drawing::Point(530, 380);
+			this->mirror->Margin = System::Windows::Forms::Padding(4, 2, 4, 2);
 			this->mirror->Name = L"mirror";
-			this->mirror->Size = System::Drawing::Size(124, 58);
+			this->mirror->Size = System::Drawing::Size(170, 33);
 			this->mirror->TabIndex = 7;
 			this->mirror->Text = L"Mirrored";
 			this->mirror->UseVisualStyleBackColor = true;
@@ -179,30 +180,33 @@ namespace CppCLRWinFormsProject {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(607, 405);
+			this->label1->Location = System::Drawing::Point(530, 484);
+			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(85, 16);
+			this->label1->Size = System::Drawing::Size(109, 20);
 			this->label1->TabIndex = 8;
 			this->label1->Text = L"Time in CPU:";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			this->label1->Click += gcnew System::EventHandler(this, &Form1::label1_Click);
 			// 
-			// label2
+			// lTimer
 			// 
-			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(588, 434);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(0, 16);
-			this->label2->TabIndex = 9;
-			this->label2->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			this->label2->Click += gcnew System::EventHandler(this, &Form1::label2_Click);
+			this->lTimer->AutoSize = true;
+			this->lTimer->Location = System::Drawing::Point(530, 513);
+			this->lTimer->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lTimer->Name = L"lTimer";
+			this->lTimer->Size = System::Drawing::Size(52, 20);
+			this->lTimer->TabIndex = 9;
+			this->lTimer->Text = L"Timer";
+			this->lTimer->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->lTimer->Click += gcnew System::EventHandler(this, &Form1::lTimer_Click);
 			// 
 			// btClose
 			// 
-			this->btClose->Location = System::Drawing::Point(591, 448);
-			this->btClose->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->btClose->Location = System::Drawing::Point(530, 49);
+			this->btClose->Margin = System::Windows::Forms::Padding(4, 2, 4, 2);
 			this->btClose->Name = L"btClose";
-			this->btClose->Size = System::Drawing::Size(124, 33);
+			this->btClose->Size = System::Drawing::Size(170, 33);
 			this->btClose->TabIndex = 10;
 			this->btClose->Text = L"Close";
 			this->btClose->UseVisualStyleBackColor = true;
@@ -210,10 +214,10 @@ namespace CppCLRWinFormsProject {
 			// 
 			// btExit
 			// 
-			this->btExit->Location = System::Drawing::Point(592, 505);
-			this->btExit->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->btExit->Location = System::Drawing::Point(530, 86);
+			this->btExit->Margin = System::Windows::Forms::Padding(4, 2, 4, 2);
 			this->btExit->Name = L"btExit";
-			this->btExit->Size = System::Drawing::Size(124, 33);
+			this->btExit->Size = System::Drawing::Size(170, 33);
 			this->btExit->TabIndex = 11;
 			this->btExit->Text = L"Exit";
 			this->btExit->UseVisualStyleBackColor = true;
@@ -221,12 +225,13 @@ namespace CppCLRWinFormsProject {
 			// 
 			// Form1
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(10, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1340, 734);
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->ClientSize = System::Drawing::Size(1546, 707);
 			this->Controls->Add(this->btExit);
 			this->Controls->Add(this->btClose);
-			this->Controls->Add(this->label2);
+			this->Controls->Add(this->lTimer);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->mirror);
 			this->Controls->Add(this->flip);
@@ -236,9 +241,15 @@ namespace CppCLRWinFormsProject {
 			this->Controls->Add(this->negativeFilter);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->open);
-			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->IsMdiContainer = true;
+			this->Margin = System::Windows::Forms::Padding(4, 2, 4, 2);
+			this->MinimumSize = System::Drawing::Size(1251, 603);
 			this->Name = L"Form1";
-			this->Text = L"Form1";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::WindowsDefaultBounds;
+			this->Text = L"IMPACT LAB  TURMA 3 - PROJETO 02";
 			this->Load += gcnew System::EventHandler(this, &Form1::Form1_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
@@ -255,18 +266,26 @@ namespace CppCLRWinFormsProject {
 		{
 			Bitmap^ imagem = gcnew Bitmap(of->FileName, true);
 			
-			pictureBox1->BackgroundImage = imagem;
-			pictureBox1->BackgroundImageLayout = ImageLayout::Stretch;
-			pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			//pictureBox1->BackgroundImage = imagem;
+			//pictureBox1->BackgroundImageLayout = ImageLayout::Stretch;
+			//pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 
+			pictureBox1->Image = imagem;
+			pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 		}
 	}
+
+
 	private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void negativeFilter_Click(System::Object^ sender, System::EventArgs^ e) {
+		stopwatch->Reset();  // Reset the stopwatch before starting a new measurement
+		stopwatch->Start();  // Start the stopwatch
 		
-		stopwatch->Start();
-		Bitmap^ image = gcnew Bitmap(pictureBox1->BackgroundImage);
+
+		//Bitmap^ image = gcnew Bitmap(pictureBox1->BackgroundImage);
+		Bitmap^ image = gcnew Bitmap(pictureBox1->Image); // Use pictureBox1->Image instead of pictureBox1->BackgroundImage
+
 		int width = image->Width;
 		int height = image->Height;
 
@@ -282,22 +301,30 @@ namespace CppCLRWinFormsProject {
 				image->SetPixel(j, i, nova);
 			}
 		}
-
-		pictureBox2->BackgroundImage = image;
-		pictureBox2->BackgroundImageLayout = ImageLayout::Stretch;
+		pictureBox2->Image = image;
+		pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+		//pictureBox2->BackgroundImage = image;
+		//pictureBox2->BackgroundImageLayout = ImageLayout::Stretch;
 		
 		
 		stopwatch->Stop();	
-		label2->Text = stopwatch->Elapsed.ToString();
+		//lTimer->Text = stopwatch->Elapsed.ToString();
+		lTimer->Text = stopwatch->Elapsed.TotalMilliseconds * 1000.0 + " µs";
+
+		//lTimer->Text = stopwatch->Elapsed.TotalMilliseconds * 1000.0 + " µs";
+		
 		
 
 		
 	}
 private: System::Void Saturação_Click(System::Object^ sender, System::EventArgs^ e) {
-	stopwatch->Start();
+	stopwatch->Reset();  // Reset the stopwatch before starting a new measurement
+	stopwatch->Start();  // Start the stopwatch
 
 	
-	Bitmap^ image = gcnew Bitmap(pictureBox1->BackgroundImage);
+	//Bitmap^ image = gcnew Bitmap(pictureBox1->BackgroundImage);
+	Bitmap^ image = gcnew Bitmap(pictureBox1->Image); // Use pictureBox1->Image instead of pictureBox1->BackgroundImage
+
 	int width = image->Width;
 	int height = image->Height;
 
@@ -327,15 +354,17 @@ private: System::Void Saturação_Click(System::Object^ sender, System::EventArgs^
 				image->SetPixel(j, i, nova);
 			}
 		}
-
-		pictureBox2->BackgroundImage = image;
-		pictureBox2->BackgroundImageLayout = ImageLayout::Stretch;
+		pictureBox2->Image = image;
+		pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+		//pictureBox2->BackgroundImage = image;
+		//pictureBox2->BackgroundImageLayout = ImageLayout::Stretch;
 	}
 	else {
 		MessageBox::Show("Please enter a value in the text box.");
 	}
 	stopwatch->Stop();
-	label2->Text = stopwatch->Elapsed.ToString();
+	//lTimer->Text = stopwatch->Elapsed.ToString();
+	lTimer->Text = stopwatch->Elapsed.TotalMilliseconds * 1000.0 + " µs";
 	
 
 }
@@ -346,8 +375,14 @@ private: System::Void Form1_Load(System::Object^ sender, System::EventArgs^ e) {
 private: System::Void saturationInput_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void flip_Click(System::Object^ sender, System::EventArgs^ e) {
-	stopwatch->Start();
-	Bitmap^ image = gcnew Bitmap(pictureBox1->BackgroundImage);
+	stopwatch->Reset();  // Reset the stopwatch before starting a new measurement
+	stopwatch->Start();  // Start the stopwatch
+
+	//Bitmap^ image = gcnew Bitmap(pictureBox1->BackgroundImage);
+	Bitmap^ image = gcnew Bitmap(pictureBox1->Image); // Use pictureBox1->Image instead of pictureBox1->BackgroundImage
+	
+
+
 	int width = image->Width;
 	int height = image->Height;
 
@@ -361,16 +396,22 @@ private: System::Void flip_Click(System::Object^ sender, System::EventArgs^ e) {
 			image->SetPixel(width - j - 1, i, p1);
 		}
 	}
-
-	pictureBox2->BackgroundImage = image;
-	pictureBox2->BackgroundImageLayout = ImageLayout::Stretch;
+	pictureBox2->Image = image;
+	pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+	/*pictureBox2->BackgroundImage = image;
+	pictureBox2->BackgroundImageLayout = ImageLayout::Stretch;*/
 	stopwatch->Stop();
-	label2->Text = stopwatch->Elapsed.ToString();
+	//lTimer->Text = stopwatch->Elapsed.ToString();
+	lTimer->Text = stopwatch->Elapsed.TotalMilliseconds * 1000.0 + " µs";
 
 }
 private: System::Void mirror_Click(System::Object^ sender, System::EventArgs^ e) {
-	stopwatch->Start();
-	Bitmap^ image = gcnew Bitmap(pictureBox1->BackgroundImage);
+	stopwatch->Reset();  // Reset the stopwatch before starting a new measurement
+	stopwatch->Start();  // Start the stopwatch
+
+	//Bitmap^ image = gcnew Bitmap(pictureBox1->BackgroundImage);
+	Bitmap^ image = gcnew Bitmap(pictureBox1->Image); // Use pictureBox1->Image instead of pictureBox1->BackgroundImage
+
 	int width = image->Width;
 	int height = image->Height;
 
@@ -384,23 +425,28 @@ private: System::Void mirror_Click(System::Object^ sender, System::EventArgs^ e)
 			image->SetPixel(width - j - 1, i, p1);
 		}
 	}
+	pictureBox2->Image = image;
+	pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 
-	pictureBox2->BackgroundImage = image;
-	pictureBox2->BackgroundImageLayout = ImageLayout::Stretch;
+	//pictureBox2->BackgroundImage = image;
+	//pictureBox2->BackgroundImageLayout = ImageLayout::Stretch;
 	stopwatch->Stop();
-	label2->Text = stopwatch->Elapsed.ToString();
+	//lTimer->Text = stopwatch->Elapsed.ToString();
+	lTimer->Text = stopwatch->Elapsed.TotalMilliseconds * 1000.0 + " µs";
 
 }
 private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
-private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
+private: System::Void lTimer_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void btExit_Click(System::Object^ sender, System::EventArgs^ e) {
 	Application::Exit();
 
 }
 private: System::Void btClose_Click(System::Object^ sender, System::EventArgs^ e) {
-	pictureBox1->ImageLocation = "";
+	
+	pictureBox1->Image = nullptr;
+	
 	pictureBox2->Image = nullptr;
 }
 };
